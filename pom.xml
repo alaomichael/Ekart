@@ -27,6 +27,8 @@
     <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
     <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
     <sonar.language>java</sonar.language>
+    <springframework.version>5.3.14.RELEASE</springframework.version>
+   
     </properties>
 
     <dependencies>
@@ -46,6 +48,7 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-rest-hal-browser</artifactId>
+            <version>3.5.3</version> <!-- Adjust version as needed -->
         </dependency>
 
         <!-- Spring Security -->
@@ -58,6 +61,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <version>3.0.4.RELEASE</version> <!-- Suggested version -->
         </dependency>
 
         <dependency>
