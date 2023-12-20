@@ -67,7 +67,8 @@
         <dependency>
             <groupId>org.thymeleaf.extras</groupId>
             <artifactId>thymeleaf-extras-springsecurity4</artifactId>
-        </dependency>
+            <version>3.0.4.RELEASE</version> <!-- Add the version here -->
+       </dependency>
 
         <!-- Spring MVC -->
         <dependency>
