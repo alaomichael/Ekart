@@ -61,7 +61,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
-            <version>3.0.4.RELEASE</version> <!-- Suggested version -->
         </dependency>
 
         <dependency>
