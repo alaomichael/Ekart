@@ -135,15 +135,21 @@
 
     <!-- Hibernate Validator -->
     <dependency>
-        <groupId>org.hibernate.validator</groupId>
-        <artifactId>hibernate-validator</artifactId>
-        <version>7.0.2.Final</version> <!-- Use the latest version available -->
-    </dependency>
-             
-  <dependency>
+    <groupId>org.hibernate.validator</groupId>
+    <artifactId>hibernate-validator</artifactId>
+    <version>7.0.2.Final</version>
+    <exclusions>
+        <exclusion>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
+
+             <dependency>
     <groupId>jakarta.validation</groupId>
     <artifactId>jakarta.validation-api</artifactId>
-    <version>2.0.2</version> <!-- Use a version compatible with Hibernate Validator 7.0.2.Final -->
+    <version>3.0.2</version> <!-- Use the appropriate version -->
 </dependency>
 
     </dependencies>
