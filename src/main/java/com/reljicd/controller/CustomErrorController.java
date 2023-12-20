@@ -1,12 +1,12 @@
 package com.reljicd.controller;
 
-import org.springframework.boot.web.servlet.error.ErrorController; // Updated import statement
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.boot.autoconfigure.web.ErrorController;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-@Controller
+@RestController
 public class CustomErrorController implements ErrorController {
 
     private static final String PATH = "/error";
@@ -26,32 +26,3 @@ public class CustomErrorController implements ErrorController {
         return PATH;
     }
 }
-
-// package com.reljicd.controller;
-
-// import org.springframework.boot.autoconfigure.web.ErrorController;
-// import org.springframework.web.bind.annotation.GetMapping;
-// import org.springframework.web.bind.annotation.RequestMapping;
-// import org.springframework.web.bind.annotation.RestController;
-// import org.springframework.web.servlet.ModelAndView;
-
-// @RestController
-// public class CustomErrorController implements ErrorController {
-
-//     private static final String PATH = "/error";
-
-//     @RequestMapping(PATH)
-//     public ModelAndView error() {
-//         return new ModelAndView("/error");
-//     }
-
-//     @GetMapping("/403")
-//     public ModelAndView error403() {
-//         return new ModelAndView("/403");
-//     }
-
-//     @Override
-//     public String getErrorPath() {
-//         return PATH;
-//     }
-// }
