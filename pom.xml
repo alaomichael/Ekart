@@ -140,11 +140,11 @@
         <version>7.0.2.Final</version> <!-- Use the latest version available -->
     </dependency>
              
-   <dependency>
+  <dependency>
     <groupId>jakarta.validation</groupId>
     <artifactId>jakarta.validation-api</artifactId>
-    <version>3.1.0</version> <!-- Use the appropriate version -->
-   </dependency>
+    <version>2.0.2</version> <!-- Use a version compatible with Hibernate Validator 7.0.2.Final -->
+</dependency>
 
     </dependencies>
 
