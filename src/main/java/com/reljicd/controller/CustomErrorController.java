@@ -1,12 +1,12 @@
 package com.reljicd.controller;
 
-import org.springframework.boot.web.servlet.error.ErrorController; // Updated import
+import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller; // Updated import
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-@RestController // Use @Controller instead of @RestController
+@Controller
 public class CustomErrorController implements ErrorController {
 
     private static final String PATH = "/error";
@@ -26,7 +26,6 @@ public class CustomErrorController implements ErrorController {
         return PATH;
     }
 }
-
 
 // package com.reljicd.controller;
 
