@@ -1,9 +1,9 @@
 package com.reljicd.controller;
 
-import org.springframework.boot.web.servlet.error.ErrorController;
-import org.springframework.stereotype.Controller; // Updated import
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.boot.web.servlet.error.ErrorController; // Updated import statement
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
