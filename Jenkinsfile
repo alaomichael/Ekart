@@ -19,7 +19,7 @@ pipeline {
         stage('Git Checkout') {
             steps {
                 script {
-                    git branch: 'main', changelog: false, credentialsId: '721cf0ff-87ad-4210-9c9b-d25745f2fe0c', poll: false, url: 'https://github.com/alaomichael/Ekart.git'
+                    git branch: 'dev', changelog: false, credentialsId: '721cf0ff-87ad-4210-9c9b-d25745f2fe0c', poll: false, url: 'https://github.com/alaomichael/Ekart.git'
                 }
             }
         }
@@ -47,9 +47,9 @@ pipeline {
                 script {
                     withSonarQubeEnv('sonar-server') {
                         sh ''' $SCANNER_HOME/bin/sonar-scanner \
-                            -Dsonar.projectName=Shopping-Cart \
+                            -Dsonar.projectName=Shopping-Cart-Dev \
                             -Dsonar.java.binaries=. \
-                            -Dsonar.projectKey=Shopping-Cart
+                            -Dsonar.projectKey=Shopping-Cart-Dev
                         '''
                     }
                 }
