@@ -84,16 +84,16 @@ pipeline {
             }
         }
         
-        stage('Deploy Docker Image') {
-            steps {
-                withCredentials([usernamePassword(credentialsId: '14a89b32-1d5b-4ccf-994a-eb26529fd2b8', usernameVariable: 'HUB_USER', passwordVariable: 'HUB_TOKEN')]) {                      
-                    sh '''
-                        docker login -u $HUB_USER -p $HUB_TOKEN 
-                        docker run -d --name shop_featured-shop_featured -p 8070:8070 $HUB_USER/shopping-cart-featured:latest
-                        '''
-                }
-            }
-        }
+        // stage('Deploy Docker Image') {
+        //     steps {
+        //         withCredentials([usernamePassword(credentialsId: '14a89b32-1d5b-4ccf-994a-eb26529fd2b8', usernameVariable: 'HUB_USER', passwordVariable: 'HUB_TOKEN')]) {                      
+        //             sh '''
+        //                 docker login -u $HUB_USER -p $HUB_TOKEN 
+        //                 docker run -d --name shop_featured-shop_featured -p 8050:8050 $HUB_USER/shopping-cart-featured:latest
+        //                 '''
+        //         }
+        //     }
+        // }
       
           }
 }
